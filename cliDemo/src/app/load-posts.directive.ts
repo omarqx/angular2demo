@@ -14,10 +14,7 @@ export class LoadPostsDirective {
     .then((x)=>this.setPosts(x.length));
   }
   private setPosts(number) {
-    let h = document.createElement("span")                // Create a <h1> element
-    let t = document.createTextNode(number);     // Create a text node
-    h.appendChild(t);
-    this.el.nativeElement.appendChild(h);
+    this.el.nativeElement.innerHTML = ""+number;
   }
 
 }
