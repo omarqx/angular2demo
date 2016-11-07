@@ -13,6 +13,6 @@ class Greeter{
     }
 }
 
-var user:Person = { firstName:"Omar",lastName:"Qaddoumi"};
+var user:Person = { firstName:"Dennis",lastName:"Ritchie"};
 let greet = new Greeter(user);
 greet.print();
