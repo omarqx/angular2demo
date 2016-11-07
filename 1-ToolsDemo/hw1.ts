@@ -1,11 +1,11 @@
-interface Person {
-    name: string;
+interface Printable {
+    text: string;
 }
 
-function greeter(person: Person) {
-    return "Hello " + person.name;
+function greeter(msg: Printable) {
+    return "Hello " + msg.text;
 }
 
-var user = { name:"world"};
+var message = { text:"world"};
 
-console.log(greeter(user));
+console.log(greeter(message));
