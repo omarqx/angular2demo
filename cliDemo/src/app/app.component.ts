@@ -12,6 +12,11 @@ export class AppComponent {
   title = 'app works!';
   users:User[] = [];
   constructor(private usersService:UsersService) {
-    this.usersService.getUsers().then(x=>this.users = x);
+    this.usersService.getUsers().then(x=>{
+      this.users = x.map(y=>{
+        y.posts = 0;
+        return y;
+      });
+    });
   }
 }
